@@ -1,43 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
         <!-- SEO Meta Tags -->
+        <!-- 메타태그 색인 한다 표현 구글 검색엔진의 노출을 위한/ 컨텐츠가 내용이 나중에 검색엔진에 의해 학습 적적히 걸어줘야 seo를 활성화가능-->
         <meta name="description" content="Pavo is a mobile app Tailwind CSS HTML template created to help you present benefits, features and information about mobile apps in order to convince visitors to download them" />
         <meta name="author" content="Your name" />
 
         <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-        <meta property="og:site_name" content="NuNu" /> <!-- website name -->
-        <meta property="og:site" content="https://NuNu.chat" /> <!-- website link -->
-        <meta property="og:title" content="NuNu" /> <!-- title shown in the actual shared post -->
-        <meta property="og:description" content="나의 아바타로 주변 친구들과 대화하고 현실 메타버스를 즐기세요" /> <!-- description shown in the actual shared post -->
-        <meta property="og:image" content="NuNu.png" /> <!-- image link, make sure it's jpg -->
-        <meta property="og:url" content="https://NuNu.chat" /> <!-- where do you want your post to link to -->
+        <!-- 오픈그래프OG  주소 복사했을때 링크에 걸린 정보를 가져와서 띄어오는것 카카오톡 링크 복사 등. opg.me 참조 -->
+        <meta property="og:site_name" content="주당" /> <!-- website name -->
+        <meta property="og:site" content="" /> <!-- website link -->
+        <meta property="og:title" content="JUDANG" /> <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="주류 픽업 서비스와 선물 배송 서비스 주당입니다." /> <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="images/judang_4.png" /> <!-- image link, make sure it's jpg -->
+        <meta property="og:url" content="https://web-pavo-153end2glagcux49.likelion.cloudtype.app/" /> <!-- where do you want your post to link to -->
         <meta name="twitter:card" content="summary_large_image" /> <!-- to have large image post format in Twitter -->
 
         <!-- Webpage Title -->
-        <title>NuNu Webpage Title</title>
+        <title>Pavo Webpage Title</title>
 
-        <!-- Styles -->
+        <!-- Styles 스타일 등 구분지어야 됨 순서가 바뀌면 오류날 가능성도있음 -->
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-        <link href="css/fontawesome-all.css" rel="stylesheet" />
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="css/fontawesome-all.css" rel="stylesheet" /><!--폰트어썸 아이콘 가져오기 css 참조해서 -->
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" /><!--테일윈드 css 단일이고 로직이라 링크로 로드함 일반 사용에선 파일로 로드안하고 필요한 요소만 다운로드해서 사용-->
         <link href="css/swiper.css" rel="stylesheet" />
         <link href="css/magnific-popup.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/custom.css" rel="stylesheet" />
 
-
-        <!-- Favicon  -->
+        <!-- Favicon 브라우저에서 뜨는 작은 아이콘 -->
         <link rel="icon" href="images/favicon.png" />
     </head>
     <body data-spy="scroll" data-target=".fixed-top">
 
         <!-- Navigation -->
-        <nav class="navbar fixed-top">
+        <nav class="navbar fixed-top navbar-back">
             <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
                 
                 <!-- Text Logo - Use this if you don't have a graphic logo -->
@@ -45,7 +46,7 @@
 
                 <!-- Image Logo -->
                 <a class="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline" href="index.html">
-                    <img src="images/logo_nun.png" alt="alternative" class="h-8" />
+                    <img src="images/judang_4.png" alt="alternative" class="h-8 h-logo" />
                 </a>
 
                 <button class="background-transparent rounded text-xl leading-none hover:no-underline focus:no-underline lg:hidden lg:text-gray-400" type="button" data-toggle="offcanvas">
@@ -55,19 +56,29 @@
                 <div class="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center" id="navbarsExampleDefault">
                     <ul class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
                         <li>
-                            <a class="nav-link page-scroll active" href="#header">누누 <span class="sr-only">(current)</span></a>
+                            <a class="nav-link page-scroll active" href="#header">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li>
-                            <a class="nav-link page-scroll" href="#details">스토리</a>
+                            <a class="nav-link page-scroll" href="#features">Features</a>
                         </li>
                         <li>
-                            <a class="nav-link page-scroll" href="#chat">대화하기</a>
+                            <a class="nav-link page-scroll" href="#details">Details</a>
                         </li>
                         <li>
-                            <a class="nav-link page-scroll" href="#review">리뷰</a>
+                            <a class="nav-link page-scroll" href="#pricing">Pricing</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                <a class="dropdown-item page-scroll" href="article.html">Article Details</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
+                            </div>
                         </li>
                         <li>
-                            <a class="nav-link page-scroll" href="#download">다운로드</a>
+                            <a class="nav-link page-scroll" href="#download">Download</a>
                         </li>
                     </ul>
                     <span class="block lg:ml-3.5">
@@ -87,13 +98,13 @@
         <header id="header" class="header py-28 text-center md:pt-36 lg:text-left xl:pt-44 xl:pb-32">
             <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
                 <div class="mb-16 lg:mt-32 xl:mt-40 xl:mr-12">
-                    <h1 class="h1-large mb-5">메타버스 SNS 메신저</h1>
-                    <p class="p-large mb-8">자신의 캐릭터를 꾸미고 근처 친구들과 대화해 보고 친구들과 스토리를 나눠요!</p>
+                    <h1 class="h1-large mb-5">주류 픽업 서비스</h1>
+                    <p class="p-large mb-8">주류 픽업 뿐아니라 지인에게 특별한 선물의 경험도 선사하세요.</p>
                     <a class="btn-solid-lg" href="#your-link"><i class="fab fa-apple"></i>Download</a>
                     <a class="btn-solid-lg secondary" href="#your-link"><i class="fab fa-google-play"></i>Download</a>
                 </div>
                 <div class="xl:text-right">
-                    <img class="inline" src="images/NuNuSNS-1.png" alt="alternative" />
+                    <img class="inline" src="images/judang_1.jpg" alt="alternative" />
                 </div>
             </div> <!-- end of container -->
         </header> <!-- end of header -->
@@ -103,18 +114,51 @@
         <!-- Introduction -->
         <div class="pt-4 pb-14 text-center">
             <div class="container px-4 sm:px-8 xl:px-4">
-                <p class="mb-4 text-gray-800 text-3xl leading-10 lg:max-w-5xl lg:mx-auto"> 메타버스 SNS 메신저 누누는 <br> 내가 직접 캐릭터를 꾸미고 주변사람들과 대화도 하며 <br> 먼 친구들과는 스토리를 공유하는 캐릭터 SNS 메신저 입니다.</p>
+                <p class="mb-4 text-gray-800 text-3xl leading-10 lg:max-w-5xl lg:mx-auto"> 주당은 맛있는 술을 쉽게 즐길수 있을 뿐아니라 특별 제작한 상황별 맞춤 포장으로 특별한 사람과 특별한 경험을 선사합니다. </p>
             </div> <!-- end of container -->
         </div>
         <!-- end of introduction -->
 
-        
+
         <!-- Features -->
         <div id="features" class="cards-1">
             <div class="container px-4 sm:px-8 xl:px-4">
 
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/features-icon-1.svg" alt="alternative" />
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">상품 설명부족</h5>
+                        <p class="mb-4">술 종류는 많아도 너무 많습니다. 주당에서는 술의 기본 정보 뿐아니라 역사까지 재미있게 설명해드립니다.</p>
+                    </div>
+                </div>
+                <!-- end of card -->
 
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/features-icon-2.svg" alt="alternative" />
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">가격 비교 어려움</h5>
+                        <p class="mb-4">매장마다 다른 가격으로 어디에 가서 잘샀는지 알 수 없습니다. 주당에서는 각 매장별 가격을 한 눈에 비교할 수 있습니다.</p>
+                    </div>
+                </div>
+                <!-- end of card -->
 
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/features-icon-3.svg" alt="alternative" />
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">특별한 포장 서비스</h5>
+                        <p class="mb-4">승진, 생일, 파티 등 상황에 맞는 포장으로 더 특별한 추억을 만들어 드립니다.</p>
+                    </div>
+                </div>
+                <!-- end of card -->
 
                 <!-- Card -->
                 <div class="card">
@@ -122,8 +166,8 @@
                         <img src="images/features-icon-4.svg" alt="alternative" />
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">이달의 핫한 스토리</h5>
-                        <p class="mb-4">스토리를 올려 이달의 핫한 스토리와 사진을 노려봐요!</p>
+                        <h5 class="card-title">집 앞 까지 안전한 배송</h5>
+                        <p class="mb-4">거리가 먼 상대에게도 선물을 집 앞까지 안전하고 빠르게 배송해드립니다.</p>
                     </div>
                 </div>
                 <!-- end of card -->
@@ -134,8 +178,8 @@
                         <img src="images/features-icon-5.svg" alt="alternative" />
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">근처 친구들과 대화</h5>
-                        <p class="mb-4">근처의 친구들이나 사람들과 대화를 해보세요.</p>
+                        <h5 class="card-title">매달 나에게 맞는 위스키 체험</h5>
+                        <p class="mb-4">매달 나에게 맞는 위스키를 집 앞으로 배송해드립니다. 집에서 편히 위스키를 즐기세요!</p>
                     </div>
                 </div>
                 <!-- end of card -->
@@ -146,8 +190,8 @@
                         <img src="images/features-icon-6.svg" alt="alternative" />
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">시간이 지나면 사라지는 메세지</h5>
-                        <p class="mb-4">특별한 시간에만 적용되는 메세지를 남기고 소통해보세요!</p>
+                        <h5 class="card-title">어디서도 못 구하는 특별한 술</h5>
+                        <p class="mb-4">주당이 독점 계약한 위스키와 주당의 특별한 주류를 경험하세요.</p>
                     </div>
                 </div>
                 <!-- end of card -->
@@ -162,14 +206,14 @@
             <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
                 <div class="lg:col-span-5">
                     <div class="mb-16 lg:mb-0 xl:mt-16">
-                        <h2 class="mb-6">나의 스토리</h2>
-                        <p class="mb-4">나의 이야기를 주변 사람들에게 소개 해보세요.</p>
-                        <p class="mb-4">친구들과 스토리를 공유하고 포인트를 받아 캐릭터를 꾸며보세요.</p>
+                        <h2 class="mb-6">Results driven ground breaking technology</h2>
+                        <p class="mb-4">Based on our team's extensive experience in developing line of business applications and constructive customer feedback we reached a new level of revenue.</p>
+                        <p class="mb-4">We enjoy helping small and medium sized tech businesses take a shot at established Fortune 500 companies</p>
                     </div>
                 </div> <!-- end of col -->
                 <div class="lg:col-span-7">
                     <div class="xl:ml-14">
-                        <img class="inline" src="images/NuNuSNS-4.png" alt="alternative" />
+                        <img class="inline" src="images/judang_2.jpg" alt="alternative" />
                     </div>
                 </div> <!-- end of col -->
             </div> <!-- end of container -->
@@ -182,26 +226,28 @@
             <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
                 <div class="lg:col-span-7">
                     <div class="mb-12 lg:mb-0 xl:mr-14">
-                        <img class="inline" src="images/NuNuSNS-2.png" alt="alternative" />
+                        <img class="inline" src="images/details-2.jpg" alt="alternative" />
                     </div>
                 </div> <!-- end of col -->
                 <div class="lg:col-span-5">
                     <div class="xl:mt-12">
-                        <h2 class="mb-6">나만의 캐릭터를 꾸며보세요</h2>
+                        <h2 class="mb-6">Instant results for the marketing department</h2>
                         <ul class="list mb-7 space-y-2">
                             <li class="flex">
                                 <i class="fas fa-chevron-right"></i>
-                                <div>얼굴형 뿐아니라 눈, 코, 입 조합으로 나만의 캐릭터를 만들 수 있어요.</div>
+                                <div>Features that will help you and your marketers</div>
                             </li>
                             <li class="flex">
                                 <i class="fas fa-chevron-right"></i>
-                                <div>여러 활동으로 얻은 포인트로 패션 아이템을 구매할 수 있어요<div class=""></div></div>
+                                <div>Smooth learning curve due to the knowledge base</div>
                             </li>
                             <li class="flex">
                                 <i class="fas fa-chevron-right"></i>
-                                <div>나만의 디자인의 옷을 만들어 베스트 셀러를 노려봐요!</div>
+                                <div>Ready out-of-the-box with minor setup settings</div>
                             </li>
                         </ul>
+                        <a class="btn-solid-reg popup-with-move-anim mr-1.5" href="#details-lightbox">Lightbox</a>
+                        <a class="btn-outline-reg" href="article.html">Details</a>
                     </div>
                 </div> <!-- end of col -->
             </div> <!-- end of container -->
@@ -257,20 +303,19 @@
 
 
         <!-- Details 3 -->
-        
-        <div id = "chat" div class="pt-16 pb-12">
+        <div class="pt-16 pb-12">
             <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
                 <div class="lg:col-span-5">
                     <div class="mb-16 lg:mb-0 xl:mt-16">
-                        <h2 class="mb-6">근처사람들과 대화를 할수 있어요 </h2>
-                        <p class="mb-4">대화방을 만들거나 근처에 담벼락에 시간이 지나면 사라지는 글을 적을 수 있어요.</p>
-                        <p class="mb-4">주변 맛집 등을 추천받고 비는 시간에 주변사람들과 대화를 해봐요.</p>
-                        <p class="mb-4">멀리 있는 사람은 대화에 참여 할 수 없어요!</p>
+                        <h2 class="mb-6">Platform integration and life time free updates</h2>
+                        <p class="mb-4">Get a glimpse of what this app can do for your marketing automation and understand why current users are so excited when using Pavo
+                            together with their teams.</p>
+                        <p class="mb-4">We will promptly answer any questions and honor your requests based on the service level agreement</p>
                     </div>
                 </div> <!-- end of col -->
                 <div class="lg:col-span-7">
                     <div class="ml-14">
-                        <img class="inline" src="images/NuNuSNS-5.png" alt="alternative" />
+                        <img class="inline" src="images/details-3.jpg" alt="alternative" />
                     </div>
                 </div> <!-- end of col -->
             </div> <!-- end of container -->
@@ -313,10 +358,9 @@
 
 
         <!-- Testimonials -->
-        <div id="review"></div>
         <div class="slider-1 py-32 bg-gray">
             <div class="container px-4 sm:px-8">
-                <h2 class="mb-12 text-center lg:max-w-xl lg:mx-auto">많은 사람들이 누누를 좋아해요.</h2>
+                <h2 class="mb-12 text-center lg:max-w-xl lg:mx-auto">What do users think about Pavo</h2>
 
                 <!-- Card Slider -->
                 <div class="slider-container">
@@ -326,10 +370,10 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img class="card-image" src="images/testimonial-1.png" alt="alternative" />
+                                    <img class="card-image" src="images/testimonial-1.jpg" alt="alternative" />
                                     <div class="card-body">
-                                        <p class="italic mb-3">누누의 캐릭터가 너무 귀여워요!!</p>
-                                        <p class="testimonial-author">다미</p>
+                                        <p class="italic mb-3">It's been so fun to work with Pavo, I've managed to integrate it properly into my business flow and it's great</p>
+                                        <p class="testimonial-author">Jude Thorn - Designer</p>
                                     </div>
                                 </div>
                             </div> <!-- end of swiper-slide -->
@@ -338,10 +382,10 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img class="card-image" src="images/testimonial-2.png" alt="alternative" />
+                                    <img class="card-image" src="images/testimonial-2.jpg" alt="alternative" />
                                     <div class="card-body">
-                                        <p class="italic mb-3">차로 이동할때는 차를 타고 다니는게 신기해요!</p>
-                                        <p class="testimonial-author">라미</p>
+                                        <p class="italic mb-3">We were so focused on launching as many campaigns as possible that we've forgotten to target our loyal customers</p>
+                                        <p class="testimonial-author">Roy Smith - Developer</p>
                                     </div>
                                 </div>
                             </div> <!-- end of swiper-slide -->
@@ -350,10 +394,10 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img class="card-image" src="images/testimonial-3.png" alt="alternative" />
+                                    <img class="card-image" src="images/testimonial-3.jpg" alt="alternative" />
                                     <div class="card-body">
-                                        <p class="italic mb-3">심심할 때 주변사람들과 대화하면 시간이 순삭이예요.</p>
-                                        <p class="testimonial-author">익명의 비버</p>
+                                        <p class="italic mb-3">I've been searching for a tool like Pavo for so long. I love the reports it generates and the amazing high accuracy</p>
+                                        <p class="testimonial-author">Marsha Singer - Marketer</p>
                                     </div>
                                 </div>
                             </div> <!-- end of swiper-slide -->
@@ -362,10 +406,10 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img class="card-image" src="images/testimonial-4.png" alt="alternative" />
+                                    <img class="card-image" src="images/testimonial-4.jpg" alt="alternative" />
                                     <div class="card-body">
-                                        <p class="italic mb-3">주변 맛집 추천 받을 때 정말 근처사람들이 알려줘서 성공률이 높아요!</p>
-                                        <p class="testimonial-author">진격의 밥솥</p>
+                                        <p class="italic mb-3">We've been waiting for a powerful piece of software that can help businesses manage their marketing projects</p>
+                                        <p class="testimonial-author">Tim Shaw - Designer</p>
                                     </div>
                                 </div>
                             </div> <!-- end of swiper-slide -->
@@ -374,10 +418,10 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img class="card-image" src="images/testimonial-5.png" alt="alternative" />
+                                    <img class="card-image" src="images/testimonial-5.jpg" alt="alternative" />
                                     <div class="card-body">
-                                        <p class="italic mb-3">한정판 썬글라스 언제 다시 푸나요?</p>
-                                        <p class="testimonial-author">패션후르츠</p>
+                                        <p class="italic mb-3">Searching for a great prototyping and layout design app was difficult but thankfully I found app suite quickly</p>
+                                        <p class="testimonial-author">Lindsay Spice - Marketer</p>
                                     </div>
                                 </div>
                             </div> <!-- end of swiper-slide -->
@@ -386,10 +430,10 @@
                             <!-- Slide -->
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img class="card-image" src="images/testimonial-6.png" alt="alternative" />
+                                    <img class="card-image" src="images/testimonial-6.jpg" alt="alternative" />
                                     <div class="card-body">
-                                        <p class="italic mb-3">달릴 때 차대신 말타는 건 어디서 구하나요?</p>
-                                        <p class="testimonial-author">암행어사</p>
+                                        <p class="italic mb-3">The app support team is amazing. They've helped me with some issues and I am so grateful to the entire team</p>
+                                        <p class="testimonial-author">Ann Blake - Developer</p>
                                     </div>
                                 </div>
                             </div> <!-- end of swiper-slide -->
@@ -411,17 +455,122 @@
         <!-- end of testimonials -->
 
 
-        
+        <!-- Pricing -->
+        <div id="pricing" class="cards-2">
+            <div class="absolute bottom-0 h-40 w-full bg-white"></div>
+            <div class="container px-4 pb-px sm:px-8">
+                <h2 class="mb-2.5 text-white lg:max-w-xl lg:mx-auto">Pricing options for all budgets</h2>
+                <p class="mb-16 text-white lg:max-w-3xl lg:mx-auto"> Our pricing plans are setup in such a way that any user can start enjoying Pavo without worrying so much about costs. They are flexible and work for any type of industry </p>
+
+                <!-- Card-->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">STANDARD</div>
+                        <div class="price"><span class="currency">$</span><span class="value">29</span></div>
+                        <div class="frequency">monthly</div>
+                        <p>This basic package covers the marketing needs of small startups</p>
+                        <ul class="list mb-7 space-y-2 text-left">
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>List building and relations</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Seamless platform integration</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Great performance on devices</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Community support and videos</div>
+                            </li>
+                        </ul>
+                        <div class="button-wrapper">
+                            <a class="btn-solid-reg page-scroll" href="#download">Download</a>
+                        </div>
+                    </div>
+                </div> <!-- end of card -->
+                <!-- end of card -->
+
+                <!-- Card-->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">ADVANCED</div>
+                        <div class="price"><span class="currency">$</span><span class="value">39</span></div>
+                        <div class="frequency">monthly</div>
+                        <p>This is a more advanced package suited for medium companies</p>
+                        <ul class="list mb-7 space-y-2 text-left">
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>List building and relations</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Seamless platform integration</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Great performance on devices</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Community support and videos</div>
+                            </li>
+                        </ul>
+                        <div class="button-wrapper">
+                            <a class="btn-solid-reg page-scroll" href="#download">Download</a>
+                        </div>
+                    </div>
+                </div> <!-- end of card -->
+                <!-- end of card -->
+
+                <!-- Card-->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">COMPLETE</div>
+                        <div class="price"><span class="currency">$</span><span class="value">49</span></div>
+                        <div class="frequency">monthly</div>
+                        <p>This is a comprehensive package designed for big organizations</p>
+                        <ul class="list mb-7 text-left space-y-2">
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>List building and relations</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Seamless platform integration</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Great performance on devices</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Community support and videos</div>
+                            </li>
+                        </ul>
+                        <div class="button-wrapper">
+                            <a class="btn-solid-reg page-scroll" href="#download">Download</a>
+                        </div>
+                    </div>
+                </div> <!-- end of card -->
+                <!-- end of card -->
+
+            </div> <!-- end of container -->
+        </div> <!-- end of cards-2 -->
+        <!-- end of pricing -->
 
 
         <!-- Conclusion -->
         <div id="download" class="basic-5">
             <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2">
                 <div class="mb-16 lg:mb-0">
-                    <img src="images/NuNuSNS-1.png" alt="alternative" />
+                    <img src="images/conclusion-smartphone.png" alt="alternative" />
                 </div>
                 <div class="lg:mt-24 xl:mt-44 xl:ml-12">
-                    <p class="mb-9 text-gray-800 text-3xl leading-10">나만의 캐릭터 sns 메신저 누누는 <br>스토리를 친구들과 공유하면서 얻은 포인트로 캐릭터를 꾸밀 수 있어요.</p>
+                    <p class="mb-9 text-gray-800 text-3xl leading-10">Team management mobile applications don’t get much better than Pavo. Download it today</p>
                     <a class="btn-solid-lg" href="#your-link"><i class="fab fa-apple"></i>Download</a>
                     <a class="btn-solid-lg secondary" href="#your-link"><i class="fab fa-google-play"></i>Download</a>
                 </div>
@@ -433,7 +582,7 @@
         <!-- Footer -->
         <div class="footer">
             <div class="container px-4 sm:px-8">
-            
+                <h4 class="mb-8 lg:max-w-3xl lg:mx-auto">Pavo is a mobile application for marketing automation and you can reach the team at <a class="text-indigo-600 hover:text-gray-500" href="mailto:email@domain.com">email@domain.com</a></h4>
                 <div class="social-container">
                     <span class="fa-stack">
                         <a href="#your-link">
